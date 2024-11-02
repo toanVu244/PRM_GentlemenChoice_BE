@@ -131,7 +131,7 @@ namespace GentlemenChoice_DAL.Models
             {
                 entity.Property(e => e.PayDate).HasColumnType("datetime");
 
-                entity.Property(e => e.PaymentAmount).HasColumnType("decimal(13, 2)");
+                entity.Property(e => e.PaymentAmount).HasColumnType("decimal(13, 0)");
 
                 entity.Property(e => e.PaymentMethod).HasMaxLength(100);
 
@@ -145,7 +145,7 @@ namespace GentlemenChoice_DAL.Models
             {
                 entity.Property(e => e.Name).HasMaxLength(255);
 
-                entity.Property(e => e.Price).HasColumnType("decimal(13, 2)");
+                entity.Property(e => e.Price).HasColumnType("decimal(13, 0)");
 
                 entity.HasOne(d => d.Category)
                     .WithMany(p => p.Products)
